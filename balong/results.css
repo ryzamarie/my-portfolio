@@ -1,0 +1,106 @@
+.container {
+    box-shadow: 0 2px 4px #00000059;
+    border-radius: 4px;
+    animation-name: fadeIn;
+    animation-duration: 0.3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.7);
+    }   
+    to {
+        transform: unset;
+        opacity: 1;
+    }
+}
+
+header {
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-between;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+}
+
+#logo {
+    width: 100px;
+}
+
+#logo img {
+    width: 100%;
+}
+
+header .logo {
+    flex-grow: 5;
+}
+
+header h1 {
+    flex-grow: 5;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.content::before {
+    position: absolute;
+    content: '';
+    width: 800px;
+    height: 800px;
+    background-color: #8181811c;
+    transform: rotate(36deg) translate(412px, -50px);
+}
+
+#profileData {
+    margin-top: 20px;
+    z-index: 3;
+}
+
+#profileData .design {
+    display: flex;
+    flex-direction: column;
+}
+
+#profileData .design div {
+    transition: 0.3s;
+    border-radius: 4px;
+    padding: 0 20px;
+}
+
+#profileData .design #logout {
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #8c0000;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+#profileData .design #logout:hover {
+    box-shadow: 0 3px 6px #000000c5;
+    transform: scale(1.1);
+}
+
+#profileData .design div:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.164);
+}
